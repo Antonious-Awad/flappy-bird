@@ -78,8 +78,7 @@ const bird = {
 let velocityY = 0; // speed of bird
 let velocityX = -2; // horizontal movement speed of pipes
 const gravity = 0.5; // downward acceleration applied on bird
-// let birdY = boardHeight / 2; // Initial vertical position of bird
-let birdY = boardHeight / 2; //
+let birdY = boardHeight / 2; // Initial vertical position of bird
 let pipeWidth = 50; // width of each pipe
 let pipeGap = 200; // vertical gap between each top-bottom pipe
 
