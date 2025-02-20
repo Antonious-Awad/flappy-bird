@@ -32,6 +32,8 @@ let board;
 let context;
 
 document.addEventListener("keydown", handleKeyPress);
+document.addEventListener("click", handleClick);
+document.addEventListener("touchstart", handleClick);
 
 const GAME_STATE = {
   MENU: "menu",
@@ -225,18 +227,28 @@ function renderGameOver() {
   }
 }
 
+function handleGamePlay() {
+  if (currentState === GAME_STATE.MENU) {
+    startGame();
+  } else if (currentState === GAME_STATE.GAME_OVER) {
+    resetGame();
+    currentState = GAME_STATE.MENU;
+  } else if (currentState === GAME_STATE.PLAYING) {
+    velocityY = -6;
+  }
+}
+// Handle click/touch events
+function handleClick(e) {
+  if (inputLocked) return;
+
+  handleGamePlay();
+}
+
 function handleKeyPress(e) {
   if (inputLocked) return;
 
   if (e.code === "Space") {
-    if (currentState === GAME_STATE.MENU) {
-      startGame();
-    } else if (currentState === GAME_STATE.GAME_OVER) {
-      resetGame();
-      currentState = GAME_STATE.MENU;
-    } else if (currentState === GAME_STATE.PLAYING) {
-      velocityY = -6;
-    }
+    handleGamePlay();
   }
 }
 
