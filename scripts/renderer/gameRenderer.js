@@ -52,5 +52,5 @@ export function renderGame() {
   // Draw score
   ctx.fillStyle = "white";
   ctx.font = "45px sans-serif";
-  ctx.fillText(Math.floor(state.score), 10, 50);
+  ctx.fillText(Math.floor(state.score), 20, 50);
 }
