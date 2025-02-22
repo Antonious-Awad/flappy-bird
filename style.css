@@ -10,11 +10,11 @@ body {
   text-align: center;
   background-color: #71c5cf;
   touch-action: manipulation;
-  padding-left: 10px;
-  padding-right: 10px;
 }
 
 #board {
   background-image: url("./images/flappybirdbg.png");
   cursor: default;
+  margin-left: 10px;
+  margin-right: 10px;
 }

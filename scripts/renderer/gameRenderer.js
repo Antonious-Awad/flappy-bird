@@ -3,6 +3,7 @@ import { state } from "../gameState.js";
 import { birdImage } from "../images.js";
 import { detectedCollision } from "../collision.js";
 import { GAME_SETTINGS } from "../constants.js";
+import { endGame } from "../main.js";
 
 export function renderGame() {
   // Update bird physics
@@ -11,7 +12,7 @@ export function renderGame() {
 
   // Add bottom boundary check
   if (state.bird.y + state.bird.height > state.boardHeight) {
-    import("../main.js").then(({ endGame }) => endGame());
+    endGame();
   }
 
   // Draw bird
