@@ -6,7 +6,7 @@ let backgroundPattern;
 
 export function renderMenu() {
   // Draw background
-  if (!backgroundPattern) {
+  if (!backgroundPattern && backgroundImage.complete) {
     backgroundPattern = ctx.createPattern(backgroundImage, "repeat");
   }
   ctx.fillStyle = backgroundPattern;
