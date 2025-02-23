@@ -1,8 +1,12 @@
-import { ctx } from "../boardManager.js";
+import { ctx, backgroundPattern, canvas } from "../boardManager.js";
 import { state } from "../gameState.js";
 import { gameOverImg } from "../images.js";
 
 export function renderGameOver() {
+  if (backgroundPattern) {
+    ctx.fillStyle = backgroundPattern;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+  }
   const imgWidth = 400;
   const imgHeight = 80;
   const x = (state.boardWidth - imgWidth) / 2;

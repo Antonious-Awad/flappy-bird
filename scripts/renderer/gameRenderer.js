@@ -1,4 +1,4 @@
-import { ctx } from "../boardManager.js";
+import { ctx, backgroundPattern, canvas } from "../boardManager.js";
 import { state } from "../gameState.js";
 import { birdImage } from "../images.js";
 import { detectedCollision } from "../collision.js";
@@ -6,6 +6,10 @@ import { GAME_SETTINGS } from "../constants.js";
 import { endGame } from "../main.js";
 
 export function renderGame() {
+  if (backgroundPattern) {
+    ctx.fillStyle = backgroundPattern;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+  }
   // Update bird physics
   state.velocityY += GAME_SETTINGS.GRAVITY;
   state.bird.y = Math.max(state.bird.y + state.velocityY, 0);

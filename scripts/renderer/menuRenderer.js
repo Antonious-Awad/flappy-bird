@@ -1,16 +1,13 @@
-import { ctx } from "../boardManager.js";
+import { backgroundPattern, canvas, ctx } from "../boardManager.js";
 import { state } from "../gameState.js";
-import { playButtonImg, logoImg, backgroundImage } from "../images.js";
-
-let backgroundPattern;
+import { playButtonImg, logoImg } from "../images.js";
 
 export function renderMenu() {
   // Draw background
-  if (!backgroundPattern && backgroundImage.complete) {
-    backgroundPattern = ctx.createPattern(backgroundImage, "repeat");
+  if (backgroundPattern) {
+    ctx.fillStyle = backgroundPattern;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
   }
-  ctx.fillStyle = backgroundPattern;
-  ctx.fillRect(0, 0, state.boardWidth, state.boardHeight);
 
   // Draw logo
   const logoScale = 300 / logoImg.width;
