@@ -3,7 +3,7 @@ import { GAME_STATE } from "./constants.js";
 export const state = {
   current: GAME_STATE.MENU,
   bird: {
-    x: 50,
+    x: window.innerWidth * 0.2,
     y: window.innerHeight / 2,
     width: 40,
     height: 30,
