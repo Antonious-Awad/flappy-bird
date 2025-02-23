@@ -106,6 +106,15 @@ export const GAME_SETTINGS = {
 
 ---
 
+### 🧰 Helpful Resources
+
+- [CanvasRenderingContext2D](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D)
+- [JavaScript modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)
+- [Definition Files](https://stackoverflow.com/questions/53710368/how-do-i-add-typescript-types-to-a-javascript-module-without-switching-to-typesc)
+- [How to build Flappy Bird using JavaScript - BEGINNER TUTORIAL](https://www.youtube.com/watch?v=tery3YZKVqI)
+
+---
+
 # 📜 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
