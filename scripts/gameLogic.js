@@ -22,6 +22,7 @@ export function handleGameAction() {
 
 function resetGame() {
   // Completely reset all game state
+  GAME_SETTINGS.INITIAL_VELOCITY_X = 2;
   state.current = GAME_STATE.MENU;
   state.score = 0;
   state.pipes = [];

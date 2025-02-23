@@ -35,13 +35,14 @@ export function renderGame() {
 
     // Score logic
     if (!pipe.passed && state.bird.x > pipe.x + pipe.width) {
+      GAME_SETTINGS.INITIAL_VELOCITY_X *= 1.05;
       state.score += 0.5;
       pipe.passed = true;
     }
 
     // Collision detection
     if (detectedCollision(state.bird, pipe)) {
-      import("../main.js").then(({ endGame }) => endGame());
+      endGame();
     }
   });
 
