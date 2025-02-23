@@ -7,7 +7,7 @@
 
 A modern implementation of the classic Flappy Bird game featuring responsive design, smooth animations, and authentic gameplay mechanics. Perfect for web gaming enthusiasts and developers looking to learn canvas game development!
 
-**Live Demo:** [Play Now](https://antonious-awad.github.io/flappy-bird/)
+**Live Demo:** <a target="_blank" href="https://antonious-awad.github.io/flappy-bird/">Play Now</a>
 
 <p align="center">
 <img src="./images/screenshot.png" align="center" alt="Gameplay Screenshot" width="200" height="400">
