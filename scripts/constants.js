@@ -5,7 +5,7 @@ export const GAME_STATE = {
 };
 
 export const GAME_SETTINGS = {
-  GRAVITY: 0.5,
+  GRAVITY: 0.3,
   INITIAL_VELOCITY_X: 2,
   FLAP_FORCE: -6,
   PIPE_GAP: 200,
